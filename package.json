@@ -5,7 +5,8 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"migrate": "node ./db/database && db-migrate up initialize"
+		"migrate": "node ./db/database && db-migrate up initialize",
+		"start": "nodemon ./index.js"
 	},
 	"keywords": [],
 	"author": "",

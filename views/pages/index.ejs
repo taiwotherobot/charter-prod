@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%- include('../partials/head'); %>
+	</head>
+	<body class="container">
+		<header><%- include('../partials/header'); %></header>
+
+		<main>
+			<div class="jumbotron">
+				<h1></h1>
+				<p>Here are the exposed Api endpoints:</p>
+				<ul>
+					<li>/shows</li>
+					<li>/shows/:id</li>
+					<li>/shows?network_id=?</li>
+					<li>/shows?package_id=?</li>
+					<li>/packages/:id</li>
+				</ul>
+			</div>
+		</main>
+
+		<footer><%- include('../partials/footer'); %></footer>
+	</body>
+</html>
