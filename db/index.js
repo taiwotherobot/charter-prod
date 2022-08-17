@@ -3,11 +3,11 @@ require('dotenv').config();
 
 
 const client = new Client({
-    host: process.env.HOST,
-    port: process.env.dbPORT,
-    user: process.env.USER,
-    password: process.env.PASSWORD,
-    database: process.env.DATABASE
+    host: "charter-db.clgi2wzmcapc.us-east-1.rds.amazonaws.com",
+    port: 5432,
+    user: "postgres",
+    password: "password",
+    database: "charter"
 })
 
 
