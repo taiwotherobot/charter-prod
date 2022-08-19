@@ -1,23 +1,35 @@
 {
-	"name": "charter-prod",
+	"name": "charter-dev",
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"migrate": "node ./db/database && db-migrate up initialize",
-		"start": "node ./index.js"
+		"migrate": "npx sequelize-cli db:migrate",
+		"dev": "nodemon index.js",
+		"down": "npx sequelize-cli db:migrate:undo",
+		"seed": "npx sequelize-cli db:seed:all",
+		"start": "node index.js"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
-		"db-migrate": "^0.11.13",
-		"db-migrate-pg": "^1.2.2",
+		"@aws-sdk/client-ssm": "^3.150.0",
+		"aws-sdk": "^2.1198.0",
+		"body-parser": "^1.20.0",
+		"cors": "^2.8.5",
 		"dotenv": "^16.0.1",
 		"ejs": "^3.1.8",
 		"express": "^4.18.1",
+		"express-openid-connect": "^2.8.0",
+		"morgan": "^1.10.0",
 		"pg": "^8.7.3",
-		"pgtools": "^0.3.2"
+		"pg-hstore": "^2.3.4",
+		"sequelize": "^6.21.4"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.19",
+		"sequelize-cli": "^6.4.1"
 	}
 }
